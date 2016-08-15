@@ -14,11 +14,6 @@ var newRand
 var bta = []
 
 
-window.onload = function() {
-	messageBoard = null
-}
-
-
 //code that places the random challenge on the challenge page. 
 
 database.on('child_added',function(dataRow){
