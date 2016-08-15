@@ -5,28 +5,45 @@
 		<title>Ocular Dare</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets\css\main.css" />
+		<noscript><link rel="stylesheet" href="assets\css\main.css" /></noscript>
 		<style>	input[type="Challenge"] {
-      		background:blue;
-      		color: white;}
+      		background:white;
+      		color: gray;}
    		</style>
 	</head>
 	<body class="is-loading">
-
+			<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+				 <script>
+				 // Initialize Firebase
+				 var config = {
+				 apiKey: "AIzaSyAB4l8ouE90w_inlgwWj-mY_G0wRrEqu1c",
+				 authDomain: "onlinespacegame-878c2.firebaseapp.com",
+				 databaseURL: "https://onlinespacegame-878c2.firebaseio.com",
+				 storageBucket: "onlinespacegame-878c2.appspot.com",
+				 };
+				 firebase.initializeApp(config);
+				</script>
+				 
+				 <!-- adding jQuery -->
+				 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="DailyDareLogo1.jpg" alt="" /></span>
+							<span class="avatar"><img src="C:\Users\Erick ojano\Desktop\ASC\html5up-identity\DailyDareLogo1.jpg" alt="" /></span>
+							<input placeholder='POST' type='text' id='message'>
+    							<!-- button for sending message to message board -->
+    						<button onclick='sendMessage()' id='js'>Post Challenge</button>
 							<h1>Ocular Dare</h1>
 							<p>Want a random challenge?</p>
+							<div id='messageBoard'></div>
 						</header>
 						<footer>
 							<ul class="icons">
-							<input type="submit">
+							<!-- <input type="challenge"> -->
 							</ul>
 						</footer>
 					</section>
@@ -47,6 +64,7 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 			</script>
-
+			<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+			<script src="OcularDareWebsite.js"></script>
 	</body>
 </html>
